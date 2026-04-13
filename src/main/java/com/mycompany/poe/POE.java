@@ -55,8 +55,20 @@ public class POE {
             }
         }
 
-        System.out.print("\nEnter Phone: ");
-        String phone = input.nextLine();
+             String phone = "";
+boolean validPhone = false;
+
+while (!validPhone) {
+    System.out.print("\nEnter Phone (must start with 27 followed by 9 digits): ");
+    phone = input.nextLine();
+
+    if (phone.startsWith("27") && phone.length() == 11 && phone.matches("\\d+")) {
+        validPhone = true;
+        System.out.println("Phone number successfully captured.");
+    } else {
+        System.out.println("Invalid format. Please try again.");
+    }
+}
 
         // Create user account
         Login newUser = new Login(fName, lName, user, pass, phone);
