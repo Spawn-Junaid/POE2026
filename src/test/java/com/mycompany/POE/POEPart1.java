@@ -39,13 +39,13 @@ public class POEPart1 {
 
   @Test
     public void testUsernameFormatting() {
-        POE.Login login = new POE.Login("Junaid", "Spawn", "Jsl_1", "Password123!", "000");
+        POE.Login login = new POE.Login("Junaid", "Spawn", "Kyl_1", "Password123!", "000");
         assertTrue(login.checkUserName(), "Username should be valid (contains _ and <= 5 chars)");
     }
     
     @Test
     public void testPasswordComplexity() {
-      POE.Login login = new POE.Login("Junaid", "Spawn", "Js2_2", "Ch@ck1", "000");
+      POE.Login login = new POE.Login("Junaid", "Spawn", "Kyl_l", "Ch&&sec@ke99!", "000");
         assertTrue(login.checkPasswordComplexity(), "Password should meet all complexity requirements");
     }
 }
