@@ -48,7 +48,7 @@ public class POE {
 
             Login testLogin = new Login(fName, lName, user, pass, "");
             if (testLogin.checkPasswordComplexity()) {
-                System.out.println("Password captured.");
+                System.out.println("Password was successfully captured.");
                 break;
             } else {
                 System.out.println("The password does not meet the complexity requirements.");
@@ -129,7 +129,7 @@ public class POE {
         // Returns the success message
         public String returnLoginStatus(String u, String p) {
             if (loginUser(u, p)) {
-                return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
+                return "Welcome " + firstName + ", " + lastName + " it is great to see you.";
             } else {
                 return "Login failed.";
             }
